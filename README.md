@@ -36,13 +36,11 @@ The Audible app on iOS won't let a user download books over celular unless they 
 
 Even when set to allow downloading over the celular network, audible lets the user know that they can disable this through the settings. 
 
-![image](images/audible_over_cell)
-
+![image](images/audible_over_cell.png)
 
 The Audile app will also detect when network connection switches from WI-FI to celular and inform the user. When this happens, Audible will either continue the download on celular automatically or halt the download. 
 
-![image](images/audible_cell_switch)
-
+![image](images/audible_cell_switch.png)
 
 Downloading large audio books takes significant time depending on bandwidth. It is often the case that a book is not fully downloaded before a user wants to listen (e.g., the user starts a download over WIFI, but then leaves their house or closes the application).
 
