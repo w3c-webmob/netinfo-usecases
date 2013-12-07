@@ -6,7 +6,7 @@ This document outlines the use cases and requirements for giving web application
 ### BBC News Website
 When the user tries to watch a video on cellular, the Website warns the user that it might cost them money if they proceed. 
 
-![image]("images/bbc_cellular.png")
+![image](images/bbc_cellular.png)
 
 When the site is accessed over WIFI, the warning is not presented to users. Note that this is distinctly different from adaptive video streaming, which needs to happen both over WIFI and cellular.
 
