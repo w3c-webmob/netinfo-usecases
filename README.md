@@ -16,7 +16,7 @@ IOS can tell a user that a system update is available, but does not allow them t
 ![image]("images/ios_needs_wifi.png")
 
 ### AppStore Application
-The AppStore does not allow users to download apps over 100Mbs unless they are on WIFI. 
+The AppStore does not allow users to download applications over 100Mbs unless they are on WIFI. 
 
 ![image]("images/appstore_cell_limit.png")
 
@@ -28,16 +28,16 @@ If the user transitions from WIFI to cellular in the middle of a large download,
 ![image](images/ios_cell_switch.png)
 
 ### Audible 
-Audio books are generally around 50-100mb and come in idividual pieces (which contain a range of book chapters). This means that a book can be on average about 100mb. 
+Audio books are generally around 50-100mb and come in individual pieces (which contain a range of book chapters). This means that a book can be on average about 100mb. 
 
-The Audible app on iOS won't let a user download books over celular unless they explicitly set an option in the application's setting. 
+The Audible application on iOS won't let a user download books over cellular unless they explicitly set an option in the application's setting. 
 
 ![image]("images/audible_wifi_only.png")
 
 ![image](images/ios_cell_switch.png)
 
 
-Even when set to allow downloading over the celular network, audible lets the user know that they can disable this through the settings. 
+Even when set to allow downloading over the cellular network, audible lets the user know that they can disable this through the settings. 
 
 ![image]("images/audible_over_cell")
 
@@ -51,10 +51,17 @@ Downloading large audio books takes significant time depending on bandwidth. It 
 
 ![image]("images/audible_error.png")
 
- In such cases, it is possible to resume a download over celular - but only if the user has explicitly allowed this in the application's settings. Note that this is controlled by the application, and not at the OS level. If the user has not allowed downloading over celular, they get the option to enable this. 
+ In such cases, it is possible to resume a download over cellular - but only if the user has explicitly allowed this in the application's settings. Note that this is controlled by the application, and not at the OS level. If the user has not allowed downloading over cellular, they get the option to enable this. 
 
 ![image]("images/audible_wifi_warn.png")
 	
 ## Android
 
 ## Windows Phone
+
+## Requirements 
+In order to be able to replicate the functionality seen in native applications, the web platform needs to:
+
+ * provide access to the connection type the system is using to receive data: namely cellular, WIFI, or none (e.g., airplane mode). This information needs to be available either immediately on page load or as close as possible to it. If the connection type changes, then the change needs to be reflected in the API in a way that script can access the updated information.  
+
+ * provide a means for scripts to be notified if the connection type changes. This is to allow developers to make dynamic changes to the DOM and/or inform the user that network connection type has changed. 
