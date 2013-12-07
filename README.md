@@ -15,6 +15,8 @@ IOS can tell a user that a system update is available, but does not allow them t
 
 ![image](images/ios_needs_wifi.png)
 
+Note that the buttons in the image are disabled - the download button serves both as a button and status indicator.
+
 ### AppStore Application
 The AppStore does not allow users to download apps over 100Mbs unless they are on WIFI. 
 
