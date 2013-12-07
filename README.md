@@ -2,7 +2,6 @@
 This document outlines the use cases and requirements for giving web applications access to network information. The use cases and requirements were gathered by looking at what both Websites and native platforms currently do with such information. 
 
 ##Web
-This section describ
 
 ### BBC News Website
 When the user tries to watch a video on cellular, the Website warns the user that it might cost them money if they proceed. 
