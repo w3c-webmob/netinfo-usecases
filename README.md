@@ -13,12 +13,14 @@ When the site is accessed over WIFI, the warning is not presented to users. Note
 ##iOS
 IOS can tell a user that a system update is available, but does not allow them to download the update unless they are connected to WIFI. iOS will also pause system updates if the user loses the connection to a WIFI network and automatically resumes downloads once the user connects to WIFI. 
 
-![image]("images/ios_needs_wifi.png")
+![image](images/ios_needs_wifi.png)
+
+Note that the buttons in the image are disabled - the download button serves both as a button and status indicator.
 
 ### AppStore Application
 The AppStore does not allow users to download applications over 100Mbs unless they are on WIFI. 
 
-![image]("images/appstore_cell_limit.png")
+![image](images/appstore_cell_limit.png)
 
 Although the store will allow the user to purchase an application, it will queue the application for download for when the user next connects to WIFI. 
 
@@ -32,28 +34,23 @@ Audio books are generally around 50-100mb and come in individual pieces (which c
 
 The Audible application on iOS won't let a user download books over cellular unless they explicitly set an option in the application's setting. 
 
-![image]("images/audible_wifi_only.png")
-
-![image](images/ios_cell_switch.png)
-
+![image](images/audible_wifi_only.png)
 
 Even when set to allow downloading over the cellular network, audible lets the user know that they can disable this through the settings. 
 
-![image]("images/audible_over_cell")
-
+![image](images/audible_over_cell.png)
 
 The Audile app will also detect when network connection switches from WI-FI to celular and inform the user. When this happens, Audible will either continue the download on celular automatically or halt the download. 
 
-![image]("images/audible_cell_switch")
-
+![image](images/audible_cell_switch.png)
 
 Downloading large audio books takes significant time depending on bandwidth. It is often the case that a book is not fully downloaded before a user wants to listen (e.g., the user starts a download over WIFI, but then leaves their house or closes the application).
 
-![image]("images/audible_error.png")
+![image](images/audible_error.png)
 
  In such cases, it is possible to resume a download over cellular - but only if the user has explicitly allowed this in the application's settings. Note that this is controlled by the application, and not at the OS level. If the user has not allowed downloading over cellular, they get the option to enable this. 
 
-![image]("images/audible_wifi_warn.png")
+![image](images/audible_wifi_warn.png)
 	
 ## Android
 
