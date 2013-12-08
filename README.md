@@ -1,6 +1,13 @@
 #Use case and requirements for network information
 This document outlines the use cases and requirements for giving web applications access to network information. The use cases and requirements were gathered by looking at what both Websites and native platforms currently do with such information. 
 
+The main questions this document seeks to explore are:
+
+ * What can an application do when it knows the kind of connection the user's device is using?     
+ * How does an application respond to when the device switches from one kind of network connection to another? 
+ * What are the motivations for using this information within an application? 
+ * What can an application do if provided with raw bandwidth info? (assuming it is mostly accurate)
+
 ##Web
 
 ### BBC News Website
@@ -76,4 +83,5 @@ In order to be able to replicate the functionality seen in native applications, 
 
  * provide access to the connection type the system is using to receive data: namely cellular, WIFI, or none (e.g., airplane mode). This information needs to be available either immediately on page load or as close as possible to it. If the connection type changes, then the change needs to be reflected in the API in a way that script can access the updated information.  
 
- * provide a means for scripts to be notified if the connection type changes. This is to allow developers to make dynamic changes to the DOM and/or inform the user that network connection type has changed. 
+ * provide a means for scripts to be notified if the connection type changes. This is to allow developers to make dynamic changes to the DOM and/or inform the user that network connection type has changed.
+
