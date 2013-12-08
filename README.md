@@ -17,6 +17,21 @@ IOS can tell a user that a system update is available, but does not allow them t
 
 Note that the buttons in the image are disabled - the download button serves both as a button and status indicator.
 
+### Dropbox
+The Dropbox application allows users to select whether videos shot on the device should be automatically uploaded using cellular data. 
+
+![Menu that controls Dropbox's camera uploads](images/dropbox_camera_sync.png)
+
+### Spotify 
+The Spotify application allows users to select whether synchronization of audio tracks between devices can occur over cellular. 
+
+[Spotify sync menu](images/spotify_sync_menu.png)
+
+### Rdio
+The Rdio application allows users to control both the quality of audio and synchronization over either WIFI or cellular. The options available are "alway" (cellular or WIFI), "Wi-Fi only", or "never".   
+
+![Rdio's settings menu](images/rdio_settings.png)
+
 ### AppStore Application
 The AppStore does not allow users to download applications over 100Mbs unless they are on WIFI. 
 
