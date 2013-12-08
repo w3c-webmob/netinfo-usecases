@@ -85,7 +85,7 @@ From the apps we've looked at, the main cases appear to be:
 
 * Warn the user that doing something over cellular could cost them money.
 * Give the user control as to whether large uploads/downloads should happen over cellular (mostly related to synchronizing media data like photos, videos, and audio files).
-* Prevent accident data transfer over cellular, which could use up of the user's download quota and/or cost them money. 
+* Prevent accidental data transfer over cellular, which could use up the user's data transfer quota and/or cost them money. 
 
 ## Requirements 
 In order to be able to replicate the functionality seen in native applications, the web platform needs to:
