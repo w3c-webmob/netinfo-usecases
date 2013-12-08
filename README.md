@@ -6,7 +6,7 @@ The main questions this document seeks to explore are:
  * What can an application do when it knows the kind of connection the user's device is using?     
  * How does an application respond to when the device switches from one kind of network connection to another? 
  * What are the motivations for using this information within an application? 
- * What can an application do if provided with raw bandwidth info? (assuming it is mostly accurate)
+ * Does the application use raw bandwidth info to adapt content?
 
 ##Web
 
