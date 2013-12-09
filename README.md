@@ -17,6 +17,36 @@ When the user tries to watch a video on cellular, the Website warns the user tha
 
 When the site is accessed over WIFI, the warning is not presented to users. Note that this is distinctly different from adaptive video streaming, which needs to happen both over WIFI and cellular.
 
+### WebRTC Web App
+A developer is dealing with a WebRTC powered web application where users can communicate using audio & video streams as well as data channels, and they were trying to find a way to adapt the best user media constraints matching the capacity of the user's connection (e.g. to avoid them to receive a full HD stream if their connection wouldn't be capable of handling it). The developer started looking at navigator.connection.bandwidth; though it may be probably the responsibility of WebRTC to adapt automatically (work is continuing here). 
+
+Many thanks to @n1k0 for this use case. 
+
+### [OPEC Portal](http://portal.marineopec.eu/v3/static/index.html)
+The developer wishes to send different data (geographic, 3D marine data taken by satellites) from a central server to users. Currently it sends everything but the developer is working on a new solution to only send what is needed. Bandwidth is an important consideration, which may or may not help with defining what to send. One example could be allowing animation of a year's worth of data, if the user is on a very fast connection. If they are not, it would be far to much data to download. 
+
+Many thanks to Shane Hudson for this use case. 
+
+### Performance KPIs
+Some enterprise applications will have key perfomance indicators or standard goals set to make sure a page loads under 2 seconds (for example). Specific enhanacements are becoming difficult to adhere to as bandwidth is unpredictable for different users. Being able to determine the bandwidth would allow developers to serve complicated and rich apps to users with higher bandwidth, and more restricted or performance-enhanced sites to those with lower, meaning targets and met and users stay happy!
+
+Adapted from Anon's comments on OkSoClap (many thanks!).
+
+### Streaming Game Application 
+The game deverlopers tried to detect bandwidth in JavaScript before loading the actual streaming plugin. The thought process was that they would try to prevent people with slow connections from having to download a 3MB Java applet or large Flash client and then still being unable to load the game. This was probably an inversion of priorities, but they did it anyway. They tried two methods: the first was to make XMLHttpRequests for increasingly large files, and seeing which one failed before the end of the timeout. This was obviously a bad idea since it introduces latency and TCP connection time. The second approach was basically the same, but instead of downloading several files, we downloaded one big file over CORS and tracked its progress in JavaScript over time, finding an average after n seconds. This way we had a slightly more accurate metric, but it still wasn't great. 
+
+Thank-you to Anon for this use case!
+
+### Music Web Application 
+Also provides streaming radio. The developers noticed that users are continually streaming music via MP3 streams or RTMP and have the need to understand on the client side the available bandwidth. They have run some tests with sample downloaded elements with known size but highly variable results. They concluded being able to switch to lower bandwidth streams would be quite valuable. Additionally ability to have this on mobile web pages would enable making decisions about audio quality tuned to mobile bandwidth limitations.
+
+Many thanks to @artlung for this use case!
+
+### Retina Images
+The developer is using some custom bandwidth detection to only serve retina images when there's enough bandwidth available. 
+
+Many thanks to @rowno1 for this use case!
+
 ##iOS
 IOS can tell a user that a system update is available, but does not allow them to download the update unless they are connected to WIFI. iOS will also pause system updates if the user loses the connection to a WIFI network and automatically resumes downloads once the user connects to WIFI.
 
@@ -84,6 +114,11 @@ On cellular connections, you have to manually pull down to fetch new data and up
 ![](images/tweetbot_3g_step_1.png)
 ![](images/tweetbot_3g_step_2.png)
 ![](images/tweetbot_3g_step_3.png)
+
+### Native iOS messages app (failed use case)
+If there's a data connection, then the Native iOS messages app uses iMessage to send the text message (rather than SMS), but over GPRS it usually always fails, and thus message isn't sent. If this was done using web, we'd have the same problem: "is there a data connection? Great - send some data" - but this fails because the reception is crap. I've always wondered if we acctually need a ping api to give us latency to a resource - then we can decide whether to proceed (in executing a data exchange). 
+
+Many thanks to @rem for this use case.
 
 ## Android
 
