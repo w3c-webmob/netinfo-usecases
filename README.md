@@ -139,5 +139,5 @@ In order to be able to replicate the functionality seen in native applications, 
 
  * provide a means for scripts to be notified if the connection type changes. This is to allow developers to make dynamic changes to the DOM and/or inform the user that network connection type has changed.
 
- ## Acknowledgments
- Huge thanks to Yoav Weiss, Mathias Bynens, Tobie Langel, and Michael Hung fo.
+## Acknowledgments
+Huge thanks to Yoav Weiss, Mathias Bynens, Tobie Langel, and Michael Hung fo.
