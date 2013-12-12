@@ -30,6 +30,8 @@ The Dropbox application allows users to select whether videos shot on the device
 
 ![Menu that controls Dropbox's camera uploads](images/dropbox_camera_sync.png)
 
+
+
 ### Spotify
 The Spotify application allows users to select whether synchronization of audio tracks between devices can occur over cellular.
 
@@ -94,6 +96,9 @@ Many thanks to @rem for this use case.
 ## Android
 
 ## Windows Phone
+Windows Phone provides users with the option to allow mobile data to be used in the event of limited WiFi connectivity. When this option is changed to "use mobile data", the phone informs that user that "your phone will use mobile data when WiFi connectivity is limited. This will use your data plan and may incur charged". It's unclear what "connectivity is limited" means.
+
+![Windows Phone 8 - Mobile network setting](images/wp_limited_wifi.png)
 
 ## Theoretical use cases
 
