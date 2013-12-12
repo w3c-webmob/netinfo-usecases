@@ -28,7 +28,7 @@ Note that the buttons in the image are disabled - the download button serves bot
 ### Dropbox
 The Dropbox application allows users to select whether videos shot on the device should be automatically uploaded using cellular data.
 
-![Menu that controls Dropbox's camera uploads](images/dropbox_camera_sync.png)
+![Menu that controls Dropbox's camera uploads](images/ios_dropbox.png)
 
 ### Spotify
 The Spotify application allows users to select whether synchronization of audio tracks between devices can occur over cellular.
