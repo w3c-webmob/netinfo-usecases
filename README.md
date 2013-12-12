@@ -13,9 +13,15 @@ The main questions this document seeks to explore are:
 ### BBC News Website
 When the user tries to watch a video on cellular, the Website warns the user that it might cost them money if they proceed.
 
-![image](images/bbc_cellular.png)
+![BBC News Website warns users of potential costs to watching videos online](images/bbc_cellular.png)
 
 When the site is accessed over WIFI, the warning is not presented to users. Note that this is distinctly different from adaptive video streaming, which needs to happen both over WIFI and cellular.
+
+According to Jim Lay, of the BCC: 
+
+> It's part of our GeoIP service to detect mobile gateways, which is then used - we show it on all devices tethered laptops as well as mobile ones, and the single shown on load message is okay for this - doesn't matter if the user is flip-flopping across a mobile and non-mobile connection during a session.
+>
+> It's possible that knowing during a page session that it's swapped between would be useful, as aswell as using it for the message we also use it for selecting appropriate quality media.
 
 
 ##iOS
@@ -153,7 +159,7 @@ In order to be able to replicate the functionality seen in native applications, 
  * provide a means for scripts to be notified if the connection type changes. This is to allow developers to make dynamic changes to the DOM and/or inform the user that network connection type has changed.
 
 ## Acknowledgments
-Huge thanks to Yoav Weiss, Mathias Bynens, Tobie Langel, and Michael Hung fo.
+Huge thanks to Yoav Weiss, Mathias Bynens, Tobie Langel, Michael Hung fo, and Jim Ley.
 
 Many thanks to [@n1k0](https://twitter.com/N1k0),
 [@ShaneHudson](https://twitter.com/ShaneHudson),
