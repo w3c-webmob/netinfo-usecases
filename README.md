@@ -100,6 +100,11 @@ Windows Phone provides users with the option to allow mobile data to be used in 
 
 ![Windows Phone 8 - Mobile network setting](images/wp_limited_wifi.png)
 
+In addition, Windows Phone 8 includes a "data sense" feature that claims to "find more efficient ways to use mobile data and display your usage. For example, some data will download only when you are connected to WiFi". The feature allows the user to set a download limit for cellular connections and will notify the user when that limit is exceeded. 
+
+![Windows Phone 8 - Data sense feature](images/wp_datasense.png)
+
+
 ## Photos and videos
 Windows phone 8 allows users to control whether photos are synchronized over Wi-Fi and/or cellular. Window Phones 8 restricts what can be sent over which connection type. For example, "good quality" photos can be sent over cellular, but "best quality" photos can only be send over Wi-Fi. Videos, irrespective of quality, can only be synchronized over Wi-Fi or not at all. 
 
