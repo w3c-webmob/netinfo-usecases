@@ -29,6 +29,11 @@ IOS can tell a user that a system update is available, but does not allow them t
 
 Note that the buttons in the image are disabled - the download button serves both as a button and status indicator.
 
+### Camera and photos 
+Through the settings provided by iOS's camera application, users have the ability to control if their photos are uploaded to Apple's [iCloud service](https://www.icloud.com/) when the device is connected to Wi-Fi.
+
+![Camera and photos settings menus](images/ios_camera.png)
+
 ### Dropbox
 The Dropbox application allows users to select whether videos shot on the device should be automatically uploaded using cellular data.
 
