@@ -170,14 +170,6 @@ Windows phone 8 allows users to control whether photos are synchronized over Wi-
 
 ## Theoretical use cases
 
-### WebRTC adaptive media streams
-When creating an WebRTC app that allows users to communicate using audio &
-video streams, a developer may want the streams to adapt their quality to
-the quality of the connection between the users.
-
-Note: One might argue that such adaptation is WebRTC's role, and netinfo
-cannot provide full bandwidth estimation *between users*.
-
 ### Sending a large amount of data to the user
 When sending a large amount of data to the user, it might be beneficial
 to take their bandwidth constraints into account, and possibly sending a
