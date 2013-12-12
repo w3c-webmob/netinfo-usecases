@@ -15,7 +15,7 @@ When the user tries to watch a video on cellular, the Website warns the user tha
 
 ![BBC News Website warns users of potential costs to watching videos online](images/bbc_cellular.png)
 
-When the site is accessed over WIFI, the warning is not presented to users. Note that this is distinctly different from adaptive video streaming, which needs to happen both over WIFI and cellular.
+When the site is accessed over Wi-Fi, the warning is not presented to users. Note that this is distinctly different from adaptive video streaming, which needs to happen both over Wi-Fi and cellular.
 
 According to Jim Lay, of the BCC: 
 
@@ -29,7 +29,7 @@ Through iOS's settings application, iOS provides users with the ability to contr
 
 ![iOS cellular menu](images/ios_cellular_settings.png)
 
-IOS can tell a user that a system update is available, but does not allow them to download the update unless they are connected to WIFI. iOS will also pause system updates if the user loses the connection to a WIFI network and automatically resumes downloads once the user connects to WIFI.
+IOS can tell a user that a system update is available, but does not allow them to download the update unless they are connected to Wi-Fi. iOS will also pause system updates if the user loses the connection to a Wi-Fi network and automatically resumes downloads once the user connects to Wi-Fi.
 
 ![image](images/ios_needs_wifi.png)
 
@@ -51,18 +51,18 @@ The Spotify application allows users to select whether synchronization of audio 
 ![Spotify sync menu](images/ios_spotify_sync_menu.png)
 
 ### Rdio
-The Rdio application allows users to control both the quality of audio and synchronization over either WIFI or cellular. The options available are "alway" (cellular or WIFI), "Wi-Fi only", or "never".
+The Rdio application allows users to control both the quality of audio and synchronization over either Wi-Fi or cellular. The options available are "alway" (cellular or Wi-Fi), "Wi-Fi only", or "never".
 
 ![Rdio's settings menu](images/rdio_settings.png)
 
 ### AppStore Application
-The AppStore does not allow users to download applications over 100Mbs unless they are on WIFI.
+The AppStore does not allow users to download applications over 100Mbs unless they are on Wi-Fi.
 
 ![image](images/appstore_cell_limit.png)
 
-Although the store will allow the user to purchase an application, it will queue the application for download for when the user next connects to WIFI.
+Although the store will allow the user to purchase an application, it will queue the application for download for when the user next connects to Wi-Fi.
 
-If the user transitions from WIFI to cellular in the middle of a large download, iOS stops the download and warns the user.
+If the user transitions from Wi-Fi to cellular in the middle of a large download, iOS stops the download and warns the user.
 
 
 ![image](images/ios_cell_switch.png)
@@ -82,7 +82,7 @@ The Audile app will also detect when network connection switches from WI-FI to c
 
 ![image](images/audible_cell_switch.png)
 
-Downloading large audio books takes significant time depending on bandwidth. It is often the case that a book is not fully downloaded before a user wants to listen (e.g., the user starts a download over WIFI, but then leaves their house or closes the application).
+Downloading large audio books takes significant time depending on bandwidth. It is often the case that a book is not fully downloaded before a user wants to listen (e.g., the user starts a download over Wi-Fi, but then leaves their house or closes the application).
 
 ![image](images/audible_error.png)
 
@@ -96,7 +96,7 @@ Facebook on iOS allows to control if videos should autoplay (or not) on cellular
 ![image](images/ios_facebook.png)
 
 ### Tweetbot
-Tweetbot and several other Twitter apps support [streaming](https://dev.twitter.com/docs/streaming-apis), but only make use of it on WiFi networks.
+Tweetbot and several other Twitter apps support [streaming](https://dev.twitter.com/docs/streaming-apis), but only make use of it on Wi-Fi networks.
 
 ![](images/tweetbot_wifi.png)
 
@@ -114,14 +114,13 @@ Many thanks to @rem for this use case.
 ## Android
 
 ## Windows Phone
-Windows Phone provides users with the option to allow mobile data to be used in the event of limited WiFi connectivity. When this option is changed to "use mobile data", the phone informs that user that "your phone will use mobile data when WiFi connectivity is limited. This will use your data plan and may incur charged". It's unclear what "connectivity is limited" means.
+Windows Phone provides users with the option to allow mobile data to be used in the event of limited Wi-Fi connectivity. When this option is changed to "use mobile data", the phone informs that user that "your phone will use mobile data when Wi-Fi connectivity is limited. This will use your data plan and may incur charged". It's unclear what "connectivity is limited" means.
 
 ![Windows Phone 8 - Mobile network setting](images/wp_limited_wifi.png)
 
-In addition, Windows Phone 8 includes a "data sense" feature that claims to "find more efficient ways to use mobile data and display your usage. For example, some data will download only when you are connected to WiFi". The feature allows the user to set a download limit for cellular connections and will notify the user when that limit is exceeded. 
+In addition, Windows Phone 8 includes a "data sense" feature that claims to "find more efficient ways to use mobile data and display your usage. For example, some data will download only when you are connected to Wi-Fi". The feature allows the user to set a download limit for cellular connections and will notify the user when that limit is exceeded. 
 
 ![Windows Phone 8 - Data sense feature](images/wp_datasense.png)
-
 
 ## Photos and videos
 Windows phone 8 allows users to control whether photos are synchronized over Wi-Fi and/or cellular. Window Phones 8 restricts what can be sent over which connection type. For example, "good quality" photos can be sent over cellular, but "best quality" photos can only be send over Wi-Fi. Videos, irrespective of quality, can only be synchronized over Wi-Fi or not at all. 
@@ -181,7 +180,7 @@ From the apps we've looked at, the main cases appear to be:
 ## Requirements
 In order to be able to replicate the functionality seen in native applications, the web platform needs to:
 
- * provide access to the connection type the system is using to receive data: namely cellular, WIFI, or none (e.g., airplane mode). This information needs to be available either immediately on page load or as close as possible to it. If the connection type changes, then the change needs to be reflected in the API in a way that script can access the updated information.
+ * provide access to the connection type the system is using to receive data: namely cellular, Wi-Fi, or none (e.g., airplane mode). This information needs to be available either immediately on page load or as close as possible to it. If the connection type changes, then the change needs to be reflected in the API in a way that script can access the updated information.
 
  * provide a means for scripts to be notified if the connection type changes. This is to allow developers to make dynamic changes to the DOM and/or inform the user that network connection type has changed.
 
