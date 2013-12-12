@@ -100,6 +100,11 @@ Windows Phone provides users with the option to allow mobile data to be used in 
 
 ![Windows Phone 8 - Mobile network setting](images/wp_limited_wifi.png)
 
+## Photos and videos
+Windows phone 8 allows users to control whether photos are synchronized over Wi-Fi and/or cellular. Window Phones 8 restricts what can be sent over which connection type. For example, "good quality" photos can be sent over cellular, but "best quality" photos can only be send over Wi-Fi. Videos, irrespective of quality, can only be synchronized over Wi-Fi or not at all. 
+
+![Windows Phone 8 - Photos and videos application setting](images/wp_photos.png)
+
 ## Theoretical use cases
 
 ### WebRTC adaptive media streams
