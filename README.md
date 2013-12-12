@@ -192,9 +192,7 @@ When serving streaming media, users are likely to prefer lower quality
 media than stalls in media playback. Bandwidth information can help
 decide which media to send to the user.
 
-Note: Similar to the previous use-case, this can be done today by
-splitting the media into chunks, and measure the download time of chunks
-as they play along.
+Note: Adaptive streaming is supposed to be handled by [Media Source Extensions](http://www.w3.org/TR/media-source/)
 
 ### Performance KPIs
 Setting hard time limits on a certain Web app's download time is
