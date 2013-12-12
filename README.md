@@ -30,6 +30,8 @@ The Dropbox application allows users to select whether videos shot on the device
 
 ![Menu that controls Dropbox's camera uploads](images/dropbox_camera_sync.png)
 
+
+
 ### Spotify
 The Spotify application allows users to select whether synchronization of audio tracks between devices can occur over cellular.
 
@@ -94,6 +96,19 @@ Many thanks to @rem for this use case.
 ## Android
 
 ## Windows Phone
+Windows Phone provides users with the option to allow mobile data to be used in the event of limited WiFi connectivity. When this option is changed to "use mobile data", the phone informs that user that "your phone will use mobile data when WiFi connectivity is limited. This will use your data plan and may incur charged". It's unclear what "connectivity is limited" means.
+
+![Windows Phone 8 - Mobile network setting](images/wp_limited_wifi.png)
+
+In addition, Windows Phone 8 includes a "data sense" feature that claims to "find more efficient ways to use mobile data and display your usage. For example, some data will download only when you are connected to WiFi". The feature allows the user to set a download limit for cellular connections and will notify the user when that limit is exceeded. 
+
+![Windows Phone 8 - Data sense feature](images/wp_datasense.png)
+
+
+## Photos and videos
+Windows phone 8 allows users to control whether photos are synchronized over Wi-Fi and/or cellular. Window Phones 8 restricts what can be sent over which connection type. For example, "good quality" photos can be sent over cellular, but "best quality" photos can only be send over Wi-Fi. Videos, irrespective of quality, can only be synchronized over Wi-Fi or not at all. 
+
+![Windows Phone 8 - Photos and videos application setting](images/wp_photos.png)
 
 ## Theoretical use cases
 
