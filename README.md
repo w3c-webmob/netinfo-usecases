@@ -45,8 +45,6 @@ The Dropbox application allows users to select whether videos shot on the device
 
 ![Menu that controls Dropbox's camera uploads](images/ios_dropbox.png)
 
-
-
 ### Spotify
 The Spotify application allows users to select whether synchronization of audio tracks between devices can occur over cellular.
 
@@ -96,7 +94,6 @@ Downloading large audio books takes significant time depending on bandwidth. It 
 Facebook on iOS allows to control if videos should autoplay (or not) on cellular. 
 
 ![image](images/ios_facebook.png)
-
 
 ### Tweetbot
 Tweetbot and several other Twitter apps support [streaming](https://dev.twitter.com/docs/streaming-apis), but only make use of it on WiFi networks.
