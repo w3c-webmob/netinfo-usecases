@@ -43,7 +43,7 @@ Through the settings provided by iOS's camera application, users have the abilit
 ### Dropbox
 The Dropbox application allows users to select whether videos shot on the device should be automatically uploaded using cellular data.
 
-![Menu that controls Dropbox's camera uploads](images/dropbox_camera_sync.png)
+![Menu that controls Dropbox's camera uploads](images/ios_dropbox.png)
 
 
 
