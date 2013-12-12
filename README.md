@@ -50,7 +50,7 @@ The Dropbox application allows users to select whether videos shot on the device
 ### Spotify
 The Spotify application allows users to select whether synchronization of audio tracks between devices can occur over cellular.
 
-[Spotify sync menu](images/spotify_sync_menu.png)
+[Spotify sync menu](images/ios_spotify_sync_menu.png)
 
 ### Rdio
 The Rdio application allows users to control both the quality of audio and synchronization over either WIFI or cellular. The options available are "alway" (cellular or WIFI), "Wi-Fi only", or "never".
@@ -143,7 +143,7 @@ cannot provide full bandwidth estimation *between users*.
 
 ### Sending a large amount of data to the user
 When sending a large amount of data to the user, it might be beneficial
-to take his bandwidth constraints into account, and possibly sending a
+to take their bandwidth constraints into account, and possibly sending a
 subset of that data (or none of it in some cases)
 
 Note: This use case can be served today by having the Web application
