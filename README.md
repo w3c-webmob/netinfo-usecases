@@ -17,7 +17,7 @@ When the user tries to watch a video on cellular, the Website warns the user tha
 
 When the site is accessed over Wi-Fi, the warning is not presented to users. Note that this is distinctly different from adaptive video streaming, which needs to happen both over Wi-Fi and cellular.
 
-According to Jim Lay, of the BCC: 
+According to Jim Lay, of the BBC: 
 
 > It's part of our GeoIP service to detect mobile gateways, which is then used - we show it on all devices tethered laptops as well as mobile ones, and the single shown on load message is okay for this - doesn't matter if the user is flip-flopping across a mobile and non-mobile connection during a session.
 >
