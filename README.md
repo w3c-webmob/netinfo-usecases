@@ -79,6 +79,12 @@ Downloading large audio books takes significant time depending on bandwidth. It 
 
 ![image](images/audible_wifi_warn.png)
 
+### Facebook
+Facebook on iOS allows to control if videos should autoplay (or not) on cellular. 
+
+![image](images/ios_facebook.png)
+
+
 ### Tweetbot
 Tweetbot and several other Twitter apps support [streaming](https://dev.twitter.com/docs/streaming-apis), but only make use of it on WiFi networks.
 
