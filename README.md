@@ -111,7 +111,48 @@ If there's a data connection, then the Native iOS messages app uses iMessage to 
 
 Many thanks to @rem for this use case.
 
+### Google Maps
+Google Maps recommends turning on Wi-Fi to improve location accuracy.
+
+![](images/google_maps.png)
+
 ## Android
+
+### Google Play Store ###
+
+Google play offers an option to download app updates only via WiFi.
+
+![](images/google_play.png)
+
+It also has settings to enable a warning before streaming over a mobile network and a setting to choose the preferred network for movie downloads.
+
+![](images/google_play_warning.png)
+![](images/google_play_download_network.png)
+
+### Google Play Music ###
+
+Google Play Music allows the user to automatically cache and/or download the music only while on WiFi. It also offers the settings to adjust the quality of the music stream and to forbid it while on a mobile connection.
+
+![](images/play_music.png)
+
+### Youtube preloading ###
+
+Youtube offers the possibility of prefetching videos in advance while on WiFi and charging.
+
+![](images/youtube.png)
+
+### Spotify ###
+
+Same as for iOS, Spotify has a setting to allow downloads over the mobile network.
+
+![](images/spotify_android.png)
+
+### Gmail and Mail ###
+
+Both, Gmail and Android email client offers a setting to download attachments only via WiFi.
+
+![](images/gmail.png)
+![](images/mail.png)
 
 ## Windows Phone
 Windows Phone provides users with the option to allow mobile data to be used in the event of limited Wi-Fi connectivity. When this option is changed to "use mobile data", the phone informs that user that "your phone will use mobile data when Wi-Fi connectivity is limited. This will use your data plan and may incur charged". It's unclear what "connectivity is limited" means.
@@ -176,6 +217,7 @@ From the apps we've looked at, the main cases appear to be:
 * Warn the user that doing something over cellular could cost them money.
 * Give the user control as to whether large uploads/downloads should happen over cellular (mostly related to synchronizing media data like photos, videos, and audio files).
 * Prevent accidental data transfer over cellular, which could use up the user's data transfer quota and/or cost them money. 
+* Advise the user to activate WiFi to improve location accuracy.
 
 ## Requirements
 In order to be able to replicate the functionality seen in native applications, the web platform needs to:
