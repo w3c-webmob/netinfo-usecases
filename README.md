@@ -50,7 +50,7 @@ The Dropbox application allows users to select whether videos shot on the device
 ### Spotify
 The Spotify application allows users to select whether synchronization of audio tracks between devices can occur over cellular.
 
-[Spotify sync menu](images/ios_spotify_sync_menu.png)
+![Spotify sync menu](images/ios_spotify_sync_menu.png)
 
 ### Rdio
 The Rdio application allows users to control both the quality of audio and synchronization over either WIFI or cellular. The options available are "alway" (cellular or WIFI), "Wi-Fi only", or "never".
