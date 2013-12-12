@@ -19,6 +19,10 @@ When the site is accessed over WIFI, the warning is not presented to users. Note
 
 
 ##iOS
+Through iOS's settings application, iOS provides users with the ability to control which applications can communicate over cellular. In addition, the menu shows how much data each application has transferred over cellular. 
+
+![iOS cellular menu](images/ios_cellular_settings.png)
+
 IOS can tell a user that a system update is available, but does not allow them to download the update unless they are connected to WIFI. iOS will also pause system updates if the user loses the connection to a WIFI network and automatically resumes downloads once the user connects to WIFI.
 
 ![image](images/ios_needs_wifi.png)
@@ -76,6 +80,12 @@ Downloading large audio books takes significant time depending on bandwidth. It 
  In such cases, it is possible to resume a download over cellular - but only if the user has explicitly allowed this in the application's settings. Note that this is controlled by the application, and not at the OS level. If the user has not allowed downloading over cellular, they get the option to enable this.
 
 ![image](images/audible_wifi_warn.png)
+
+### Facebook
+Facebook on iOS allows to control if videos should autoplay (or not) on cellular. 
+
+![image](images/ios_facebook.png)
+
 
 ### Tweetbot
 Tweetbot and several other Twitter apps support [streaming](https://dev.twitter.com/docs/streaming-apis), but only make use of it on WiFi networks.
