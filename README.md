@@ -163,7 +163,7 @@ In addition, Windows Phone 8 includes a "data sense" feature that claims to "fin
 
 ![Windows Phone 8 - Data sense feature](images/wp_datasense.png)
 
-## Photos and videos
+### Photos and videos
 Windows phone 8 allows users to control whether photos are synchronized over Wi-Fi and/or cellular. Window Phones 8 restricts what can be sent over which connection type. For example, "good quality" photos can be sent over cellular, but "best quality" photos can only be send over Wi-Fi. Videos, irrespective of quality, can only be synchronized over Wi-Fi or not at all. 
 
 ![Windows Phone 8 - Photos and videos application setting](images/wp_photos.png)
@@ -209,6 +209,16 @@ information in order to decide whether to enhance it further.
 Serving HQ images only to users with high bandwidth.
 
 Note: This is better served by a dedicated Responsive Images solution.
+
+### Improve battery life
+
+As explained at [Modifying your Download Patterns Based on the Connectivity Type](http://developer.android.com/training/efficient-downloads/connectivity_patterns.html) a wise use of the network based on the connection type might improve the battery life. Specially interesting for mobile devices.
+
+### Network based authentication
+
+Some carrier applications are able to authenticate the user when connected to a mobile network.
+
+Mozilla's payment provider is currenly doing this kind of authentication. Being able to know in advance if the user is connected to a mobile network might save significant time that is currently spent doing the corresponding requests to the carrier servers to check if the user is authenticatable or not.
 
 ## Discussion
 
