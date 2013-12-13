@@ -104,10 +104,14 @@ The tweetbot application supports [streaming](https://dev.twitter.com/docs/strea
 
 ![](images/ios_tweetbot_wifi.png)
 
-On cellular connections, you have to manually pull down to fetch new data and update the view.
+On cellular connections, the user has to manually pull-down to fetch new data and update the view.
 
 ![](images/ios_tweetbot_3g_step_1.png)
+
+User pulls down: 
 ![](images/ios_tweetbot_3g_step_2.png)
+
+Any new content is loaded: 
 ![](images/ios_tweetbot_3g_step_3.png)
 
 ### Native iOS messages app (failed use case)
