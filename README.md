@@ -214,6 +214,10 @@ Some carrier applications are able to authenticate the user when connected to a 
 
 Mozilla's payment provider is currenly doing this kind of authentication. Being able to know in advance if the user is connected to a mobile network might save significant time that is currently spent doing the corresponding requests to the carrier servers to check if the user is authenticatable or not.
 
+### Roaming detection warning
+
+In mobile devices, privileged applications with access to [MCC and MNC](http://es.wikipedia.org/wiki/MCC/MNC) codes from the current network and the SIM card may be able to detect a roaming situation by comparing these values. However, showing a warning when the user is already connected through WiFi doesn't seem like the best UX. Being able to also detect if the device is using a mobile connection will provide to these apps the possibility of delivering a better UX by only showing this kind of warning when the device is actually in a roaming data call.
+
 ## Discussion
 
 From the apps we've looked at, the main cases appear to be:
