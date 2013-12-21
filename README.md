@@ -150,6 +150,11 @@ Just as with iOS, Facebook gives the user the choice to only auto-play videos wh
 
 ![Facebook's app settings on Android](images/android_facebook.png)
 
+### Evernote
+The Evernote application affords users the choice to only do synching when connected to a Wi-Fi network. 
+
+![Evernote's syncing options on Android](images/android_evernote.png)
+
 ### Youtube
 Youtube offers the possibility of prefetching videos in advance while on Wi-Fi and charging.
 
