@@ -125,6 +125,11 @@ Google Maps recommends turning on Wi-Fi to improve location accuracy. Users will
 ## Android
 The following is a sample of Android applications running on mobile devices running Android 4.x.  
 
+### Updates on Android
+Android affords users the choice to select that applications should only be updated over Wi-Fi. It also allows updating at "any time" (meaning over cellular), but warns users that they may incur charges.
+
+![Android's settings for managing how applications should be updated](images/android_google_play.png)
+
 ### Google Play Store
 Google play offers an option to download app updates only via Wi-Fi.
 
