@@ -155,6 +155,11 @@ The Evernote application affords users the choice to only do synching when conne
 
 ![Evernote's syncing options on Android](images/android_evernote.png)
 
+### Pocket
+The Pocket application gives users control as to whether downloads should occur exclusively over Wi-Fi.
+
+![Pocket's application settings on Android](images/android_pocket.png)
+
 ### Youtube
 Youtube offers the possibility of prefetching videos in advance while on Wi-Fi and charging.
 
