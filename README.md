@@ -130,6 +130,15 @@ Android affords users the choice to select that applications should only be upda
 
 ![Android's settings for managing how applications should be updated](images/android_google_play.png)
 
+## Economist
+The Economist application provides users with options for controlling which connection type is used to download new issues of the magazine. 
+
+![The Economist app's settings for managing what content is downloaded over which connection](images/android_economist.png)
+
+In this case, new issues of the magazine will be auto-downloaded over cellular or Wi-Fi. Note that these options are unlike other applications in this sample, in that it explicitly lists "3G" instead of "cellular" or Wi-Fi. It is unclear if "3G" literally means a "3G" connection or if downloads will occur on other cellular connection types, such as GPRS or on more modern connection types the phone supports (e.g., "4G"). 
+
+It must be noted that this option also appears on devices that don't support cellular connections (e.g., the Nexus 7 tablet). Showing the user options to synchronize items over a connection type that is not supported by the device can obviously be confusing.
+
 ### Google Play Store
 Google play offers an option to download app updates only via Wi-Fi.
 
