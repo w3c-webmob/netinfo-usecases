@@ -143,7 +143,12 @@ Google Play Music allows the user to automatically cache and/or download the mus
 ### Netflix
 Netflix affords users the choice to restrict video playback to Wi-Fi only.
 
-![Netflix's app settings](images/android_netflix.png)
+![Netflix's app settings on Android](images/android_netflix.png)
+
+### Facebook
+Just as with iOS, Facebook gives the user the choice to only auto-play videos when connected to Wi-Fi.
+
+![Facebook's app settings on Android](images/android_facebook.png)
 
 ### Youtube
 Youtube offers the possibility of prefetching videos in advance while on Wi-Fi and charging.
