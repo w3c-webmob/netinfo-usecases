@@ -214,22 +214,25 @@ Windows phone 8 allows users to control whether photos are synchronized over Wi-
 
 ![Windows Phone 8 - Photos and videos application setting](images/wp_photos.png)
 
-## Discussion
+## Use cases and Requirements
 
-From the apps we've looked at, the main cases appear to be:
+From the applications listed above, the recurring use cases appear to be:
 
-* Warn the user that doing something over cellular could cost them money.
-* Detect when a connection switches from cellular to Wi-Fi, and vice versa.
-* Give the user control as to whether large uploads/downloads should happen over cellular (mostly related to synchronizing media data like photos, videos, and audio files).
-* Prevent accidental data transfer over cellular, which could use up the user's data transfer quota and/or cost them money. 
-* Advise the user to activate Wi-Fi to improve location accuracy.
+* Warning the user that doing something over cellular could cost them money.
+* Detecting when a connection switches from cellular to Wi-Fi, and vice versa.
+* Giving the user control as to whether large uploads/downloads should happen over cellular (mostly related to synchronizing media data like photos, videos, and audio files).
+* Preventing accidental data transfer over cellular, which could use up the user's data transfer quota and/or cost them money. 
+* Advising the user to activate Wi-Fi to improve location accuracy.
 
-## Requirements
-In order to be able to replicate the functionality seen in native applications, the web platform needs to:
+In order to be able to replicate the functionality seen in native applications, the requirements for the web platform appear to be:
 
  * provide access to the connection type the system is using to receive data: namely cellular, Wi-Fi, or none (e.g., airplane mode). This information needs to be available either immediately on page load or as close as possible to it. If the connection type changes, then the change needs to be reflected in the API in a way that script can access the updated information.
 
- * provide a means for scripts to be notified if the connection type changes. This is to allow developers to make dynamic changes to the DOM and/or inform the user that the network connection type has changed.
+ * provide a means for scripts to be notified if the connection type changes. This is to allow developers to make dynamic changes to the DOM and/or inform the user that the network connection type has changed (and that it could impact them in some way).
+
+
+## Discussion
+
 
 ## License
 ![CC0](http://i.creativecommons.org/p/zero/1.0/80x15.png) To the extent possible under law, the [contributors](https://github.com/w3c-webmob/netinfo/graphs/contributors) have waived all copyright and related or neighboring rights to this work. In addition, as of 21 December 2013, the editors have made this document available under the Open Web Foundation Agreement Version 1.0, which is available at http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0. 
