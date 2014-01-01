@@ -1,18 +1,19 @@
 #Use case and requirements for network information
-This document outlines the use cases and requirements for giving web applications access to network information. The use cases and requirements were gathered by looking at what both Websites and native platforms currently do with such information.
+This document outlines the use cases and requirements for an API that would give web applications access to network information. The use cases and requirements were gathered by looking at what both Websites, native platforms, and native applications do with such information.
+
+## Motivation
 
 The main questions this document seeks to explore are:
 
+ * What are the motivations for making use of network information within an application?
  * What can an application do when it knows the kind of connection the user's device is using?
- * How does an application respond to when the device switches from one kind of network connection to another?
- * What are the motivations for using this information within an application?
- * Does the application use raw bandwidth info to adapt content?
-
+ * How does an application respond to the device switching from one kind of network connection to another?
+ 
 ##Web
 The following are examples of web applications that use various means to detect if a user is on Wi-Fi or cellular. 
 
 ### BBC News Website
-When the user tries to watch a video on cellular, [BBC News](http://bbc.com/news/) warns the user that it might cost them money if they proceed.
+When the user tries to watch a video on cellular, the [BBC News](http://bbc.com/news/) website warns the user that it might cost them money if they proceed.
 
 ![BBC News Website warns users of potential costs to watching videos online](images/web_bbc_cellular.png)
 
@@ -24,7 +25,6 @@ According to Jim Lay of the BBC:
 >
 > It's possible that knowing during a page session that it's swapped between would be useful, as well as using it for the message we also use it for selecting appropriate quality media.
 
-
 ##iOS
 This section examines iOS 6 and 7, as well as various applications. 
 
@@ -33,14 +33,14 @@ Through iOS's settings application, iOS provides users with the ability to contr
 
 ![iOS cellular menu](images/ios_cellular_settings.png)
 
-iOS can tell a user that a system update is available, but does not allow them to download the update unless they are connected to Wi-Fi. iOS will also pause system updates if the user loses the connection to a Wi-Fi network and automatically resumes downloads once the user connects to Wi-Fi.
+As part of the settings application, iOS can tell a user that a system update is available. However, iOS does not allow the user to download the update unless they are connected to Wi-Fi. iOS will also pause system updates if the user loses the connection to a Wi-Fi network and automatically resumes downloads once the user reconnects to Wi-Fi.
 
 ![iOS update screen: tells the user that Wi-Fi is required to perform the update to iOS7](images/ios_needs_wifi.jpg)
 
 Note that the buttons in the image are disabled - the download button serves both as a button and status indicator.
 
 ### Camera and photos 
-Through the settings provided by iOS's camera application, users have the ability to control if their photos are uploaded to Apple's [iCloud service](https://www.icloud.com/) when the device is connected to Wi-Fi.
+Through the settings of iOS's camera application, users have the ability to control if their photos are uploaded to Apple's [iCloud service](https://www.icloud.com/) when the device is connected to Wi-Fi. There is no option for photos to be uploaded automatically via cellular: if this option is turned off, iOS warns the users that photos in the photo stream will be deleted from the device. 
 
 ![Camera and photos settings menus](images/ios_camera.png)
 
@@ -55,7 +55,7 @@ The [Spotify](https://itunes.apple.com/en/app/spotify/id324684580) application a
 ![Spotify sync menu](images/ios_spotify_sync_menu.png)
 
 ### Rdio
-The [Rdio](https://itunes.apple.com/us/app/rdio/id335060889) application allows users to control both the quality of audio and synchronization over either Wi-Fi or cellular. The options available are "alway" (cellular or Wi-Fi), "Wi-Fi only", or "never".
+The [Rdio](https://itunes.apple.com/us/app/rdio/id335060889) application allows users to control both the quality of audio and synchronization over either Wi-Fi or cellular. The options available are "always" (cellular or Wi-Fi), "Wi-Fi only", or "never".
 
 ![Rdio's settings menu](images/ios_rdio_settings.png)
 
@@ -71,17 +71,17 @@ If the user transitions from Wi-Fi to cellular in the middle of a large download
 ![iOS will detect when the device switches from Wi-Fi to cellular and stops downloads that exceed 100Mb](images/ios_cell_switch.png)
 
 ### Audible
-Audio books are generally around 50-100mb and come in individual pieces (which contain a range of book chapters). This means that a book can be on average about 100mb.
+Audio books are generally around 50-100mb and come in individual pieces (which contain a range of book chapters). This means that an audio book can be on average about 100mb.
 
-The [Audible](https://itunes.apple.com/us/app/audiobooks-from-audible/id379693831?mt=8) application on iOS won't let a user download books over cellular unless they explicitly set an option in the application's setting.
+The [Audible](https://itunes.apple.com/us/app/audiobooks-from-audible/id379693831?mt=8) application on iOS won't let a user download audio books over cellular unless they explicitly set an option in the application's setting.
 
 ![Audible's app settings on iOS](images/ios_audible_wifi_only.png)
 
-Even when set to allow downloading over the cellular network, audible lets the user know that they can disable this through the settings.
+Even when set to allow downloading over the cellular network, audible lets the user know that they can disable this through the application's settings.
 
 ![Audible pops up a warning to let the user know they are about to download a large file over cellular](images/ios_audible_over_cell.png)
 
-The Audile app will also detect when network connection switches from WI-FI to cellular and inform the user. When this happens, Audible will either continue the download on cellular automatically or halt the download.
+The Audible app will also detect when network connection switches from WI-FI to cellular and informs the user. When this happens, Audible will either continue the download on cellular automatically or halt the download.
 
 ![During a download, Audible informs the user if it detects that the connection to Wi-Fi is lost.](images/ios_audible_cell_switch.png)
 
@@ -89,7 +89,7 @@ Downloading large audio books takes significant time depending on bandwidth. It 
 
 ![An audio book that has failed to completely download in the Audible application](images/ios_audible_error.png)
 
- In such cases, it is possible to resume a download over cellular - but only if the user has explicitly allowed this in the application's settings. Note that this is controlled by the application, and not at the OS level. If the user has not allowed downloading over cellular, they get the option to enable this.
+In such a case, it is possible to resume a download over cellular - but only if the user has explicitly allowed this in the application's settings. Note that this is controlled by the application, and not at the OS level. If the user has not allowed downloading over cellular, they get the option to enable this.
 
 ![Audible warns the user that they are not connected to Wi-Fi, and explicitly prevents a download from happening.](images/ios_audible_wifi_warn.png)
 
@@ -129,7 +129,7 @@ The Australian Broadcasting Corporation's (ABC) [iview application on iOS](https
 ![iview's confirmation dialog](images/ios_iview.png)
 
 ## Android
-The following is a sample of Android applications running on mobile devices running Android 4.x.  
+The following is a sample of native applications running on Android 4.x.  
 
 ### Updates on Android
 Android affords users the choice to select that applications should only be updated over Wi-Fi. It also allows updating at "any time" (meaning over cellular), but warns users that they may incur charges.
@@ -172,7 +172,7 @@ Just as with iOS, Facebook gives the user the choice to only auto-play videos wh
 ![Facebook's app settings on Android](images/android_facebook.png)
 
 ### Evernote
-The Evernote application affords users the choice to only do synching when connected to a Wi-Fi network. 
+The Evernote application affords users the choice to only sync when connected to a Wi-Fi network. 
 
 ![Evernote's syncing options on Android](images/android_evernote.png)
 
@@ -182,7 +182,7 @@ The Pocket application gives users control as to whether downloads should occur 
 ![Pocket's application settings on Android](images/android_pocket.png)
 
 ### YouTube
-The [YouTube](https://play.google.com/store/apps/details?id=com.google.android.youtube&hl=en) application on Android offers the possibility of prefetching videos in advance while on Wi-Fi and charging.
+The [YouTube](https://play.google.com/store/apps/details?id=com.google.android.youtube&hl=en) application on Android offers the possibility of prefetching videos in advance while on Wi-Fi and the device's battery is charging.
 
 ![YouTube settings on Android](images/android_youtube.png)
 
@@ -196,12 +196,12 @@ Same as for iOS, [Spotify](https://play.google.com/store/apps/details?id=com.spo
 
 ![Android Gmail](images/android_gmail.png)
 
-The same option appears in Android's mail program. 
+The same option appears in Android's mail application. 
 
 ![Android mail](images/android_mail.png)
 
 ## Windows Phone
-Windows Phone provides users with the option to allow mobile data to be used in the event of limited Wi-Fi connectivity. When this option is changed to "use mobile data", the phone informs that user that "your phone will use mobile data when Wi-Fi connectivity is limited. This will use your data plan and may incur charged". It's unclear what "connectivity is limited" means.
+Windows Phone provides users with the option to allow mobile data to be used in the event of limited Wi-Fi connectivity. When this option is changed to "use mobile data", the phone informs the user that "your phone will use mobile data when Wi-Fi connectivity is limited. This will use your data plan and may incur a charge". It's unclear what "connectivity is limited" means.
 
 ![Windows Phone 8 - Mobile network setting](images/wp_limited_wifi.png)
 
@@ -219,6 +219,7 @@ Windows phone 8 allows users to control whether photos are synchronized over Wi-
 From the apps we've looked at, the main cases appear to be:
 
 * Warn the user that doing something over cellular could cost them money.
+* Detect when a connection switches from cellular to Wi-Fi, and vice versa.
 * Give the user control as to whether large uploads/downloads should happen over cellular (mostly related to synchronizing media data like photos, videos, and audio files).
 * Prevent accidental data transfer over cellular, which could use up the user's data transfer quota and/or cost them money. 
 * Advise the user to activate Wi-Fi to improve location accuracy.
@@ -228,7 +229,7 @@ In order to be able to replicate the functionality seen in native applications, 
 
  * provide access to the connection type the system is using to receive data: namely cellular, Wi-Fi, or none (e.g., airplane mode). This information needs to be available either immediately on page load or as close as possible to it. If the connection type changes, then the change needs to be reflected in the API in a way that script can access the updated information.
 
- * provide a means for scripts to be notified if the connection type changes. This is to allow developers to make dynamic changes to the DOM and/or inform the user that network connection type has changed.
+ * provide a means for scripts to be notified if the connection type changes. This is to allow developers to make dynamic changes to the DOM and/or inform the user that the network connection type has changed.
 
 ## License
 ![CC0](http://i.creativecommons.org/p/zero/1.0/80x15.png) To the extent possible under law, the [contributors](https://github.com/w3c-webmob/netinfo/graphs/contributors) have waived all copyright and related or neighboring rights to this work. In addition, as of 21 December 2013, the editors have made this document available under the Open Web Foundation Agreement Version 1.0, which is available at http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0. 
