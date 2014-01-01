@@ -230,9 +230,15 @@ In order to be able to replicate the functionality seen in native applications, 
 
  * provide a means for scripts to be notified if the connection type changes. This is to allow developers to make dynamic changes to the DOM and/or inform the user that the network connection type has changed (and that it could impact them in some way).
 
-
 ## Discussion
+TBW...
 
+### Download manager
+When starting a large download, one ought to ask whether replicating the native use cases ought to be done by the app directly or through some mediation via the browser. For instance, a [download manager](http://en.wikipedia.org/wiki/Download_manager) might be more effective for the "large download" use case: instead of developers having to manage dowanlowds by inspecting the type of connection, a download manager could queue downloads until a certain connection type is available - plus provide the user with additional settings and options to pause/resume/cancel downloads, etc. 
+
+Having said that, in-application downloads are very application specific (e.g., as in audio books for the Audible application which can be played as they download, or audio tracks for Spotify). So, while a the download manager would probably help with managing connection type, error recovery, and pausing/resuming, the download process still needs to provide feedback (progress and errors) to the application irrespective of connection type. 
+
+Additionally, given the reactive nature of content synchronization, having a global download manager may be difficult for user's to manage - as setting options for the download manager might override options in all applications. For example, a user may want to be able to download audio books on cellular ("cost/quota be damned!") but does not want to accidentally kick off a bunch of other synchronization tasks. In MacOS, for instance, this can happen when the user tethers with a mobile device: as tethering simply acts like a Wi-Fi connection, a system-wide network availability event is sent out causing applications to start synchronizing. This can result in large amounts of data being transferred in the background unless the user intervenes by shutting down applications (e.g., email programs, Dropbox, etc.). 
 
 ## License
 ![CC0](http://i.creativecommons.org/p/zero/1.0/80x15.png) To the extent possible under law, the [contributors](https://github.com/w3c-webmob/netinfo/graphs/contributors) have waived all copyright and related or neighboring rights to this work. In addition, as of 21 December 2013, the editors have made this document available under the Open Web Foundation Agreement Version 1.0, which is available at http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0. 
