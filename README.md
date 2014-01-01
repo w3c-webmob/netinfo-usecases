@@ -183,7 +183,6 @@ The Pocket application gives users control as to whether downloads should occur 
 
 ### YouTube
 The [YouTube](https://play.google.com/store/apps/details?id=com.google.android.youtube&hl=en) application on Android offers the possibility of prefetching videos in advance while on Wi-Fi and charging.
->>>>>>> Added links, cleanup text, typos, alt text
 
 ![YouTube settings on Android](images/android_youtube.png)
 
