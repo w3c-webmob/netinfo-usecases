@@ -125,6 +125,20 @@ Google Maps recommends turning on Wi-Fi to improve location accuracy. Users will
 ## Android
 The following is a sample of Android applications running on mobile devices running Android 4.x.  
 
+### Updates on Android
+Android affords users the choice to select that applications should only be updated over Wi-Fi. It also allows updating at "any time" (meaning over cellular), but warns users that they may incur charges.
+
+![Android's settings for managing how applications should be updated](images/android_google_play.png)
+
+## Economist
+The Economist application provides users with options for controlling which connection type is used to download new issues of the magazine. 
+
+![The Economist app's settings for managing what content is downloaded over which connection](images/android_economist.png)
+
+In this case, new issues of the magazine will be auto-downloaded over cellular or Wi-Fi. Note that these options are unlike other applications in this sample, in that it explicitly lists "3G" instead of "cellular" or Wi-Fi. It is unclear if "3G" literally means a "3G" connection or if downloads will occur on other cellular connection types, such as GPRS or on more modern connection types the phone supports (e.g., "4G"). 
+
+It must be noted that this option also appears on devices that don't support cellular connections (e.g., the Nexus 7 tablet). Showing the user options to synchronize items over a connection type that is not supported by the device can obviously be confusing.
+
 ### Google Play Store
 Google play offers an option to download app updates only via Wi-Fi.
 
@@ -139,6 +153,26 @@ It also has settings to enable a warning before streaming over a mobile network 
 Google Play Music allows the user to automatically cache and/or download the music only while on Wi-Fi. It also offers the settings to adjust the quality of the music stream and to forbid it while on a mobile connection.
 
 ![](images/android_play_music.png)
+
+### Netflix 
+Netflix affords users the choice to restrict video playback to Wi-Fi only.
+
+![Netflix's app settings on Android](images/android_netflix.png)
+
+### Facebook
+Just as with iOS, Facebook gives the user the choice to only auto-play videos when connected to Wi-Fi. 
+
+![Facebook's app settings on Android](images/android_facebook.png)
+
+### Evernote
+The Evernote application affords users the choice to only do synching when connected to a Wi-Fi network. 
+
+![Evernote's syncing options on Android](images/android_evernote.png)
+
+### Pocket
+The Pocket application gives users control as to whether downloads should occur exclusively over Wi-Fi. 
+
+![Pocket's application settings on Android](images/android_pocket.png)
 
 ### Youtube
 Youtube offers the possibility of prefetching videos in advance while on Wi-Fi and charging.
