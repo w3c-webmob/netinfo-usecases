@@ -161,7 +161,6 @@ It also has settings to enable a warning before streaming over a mobile network 
 
 ![Settings for Google Play Music](images/android_play_music.png)
 
-<<<<<<< HEAD
 ### Netflix 
 Netflix affords users the choice to restrict video playback to Wi-Fi only.
 
@@ -182,9 +181,6 @@ The Pocket application gives users control as to whether downloads should occur 
 
 ![Pocket's application settings on Android](images/android_pocket.png)
 
-### Youtube
-Youtube offers the possibility of prefetching videos in advance while on Wi-Fi and charging.
-=======
 ### YouTube
 The [YouTube](https://play.google.com/store/apps/details?id=com.google.android.youtube&hl=en) application on Android offers the possibility of prefetching videos in advance while on Wi-Fi and charging.
 >>>>>>> Added links, cleanup text, typos, alt text
@@ -219,55 +215,6 @@ Windows phone 8 allows users to control whether photos are synchronized over Wi-
 
 ![Windows Phone 8 - Photos and videos application setting](images/wp_photos.png)
 
-<<<<<<< HEAD
-=======
-## Theoretical use cases
-
-### Sending a large amount of data to the user
-When sending a large amount of data to the user, it might be beneficial
-to take their bandwidth constraints into account, and possibly sending a
-subset of that data (or none of it in some cases)
-
-Note: This use case can be served today by having the Web application
-download the data in ranges, measure the range's download time, and
-decide whether to continue the data's download as it goes along.
-
-### Streaming media
-When serving streaming media, users are likely to prefer lower quality
-media than stalls in media playback. Bandwidth information can help
-decide which media to send to the user.
-
-Note: Adaptive streaming is supposed to be handled by [Media Source Extensions](http://www.w3.org/TR/media-source/)
-
-### Performance KPIs
-Setting hard time limits on a certain Web app's download time is
-difficult to achieve. Using bandwidth information can ease the decision
-to send a "restricted" experience to bandwidth-restricted users.
-
-Note: This can be achieved today by serving a basic experience to all
-users, and using progressive enhancement and Navigation Timing
-information in order to decide whether to enhance it further.
-
-### Responsive images
-Serving HQ images only to users with high bandwidth.
-
-Note: This is better served by a dedicated Responsive Images solution.
-
-### Improve battery life
-
-As explained at [Modifying your Download Patterns Based on the Connectivity Type](http://developer.android.com/training/efficient-downloads/connectivity_patterns.html) a wise use of the network based on the connection type might improve the battery life. Specially interesting for mobile devices.
-
-### Network based authentication
-
-Some carrier applications are able to authenticate the user when connected to a mobile network.
-
-Mozilla's payment provider is currently doing this kind of authentication. Being able to know in advance if the user is connected to a mobile network might save significant time that is currently spent doing the corresponding requests to the carrier servers to check if the user is authenticatable or not.
-
-### Roaming detection warning
-
-In mobile devices, privileged applications with access to [MCC and MNC](http://es.wikipedia.org/wiki/MCC/MNC) codes from the current network and the SIM card may be able to detect a roaming situation by comparing these values. However, showing a warning when the user is already connected through WiFi doesn't seem like the best UX. Being able to also detect if the device is using a mobile connection will provide to these apps the possibility of delivering a better UX by only showing this kind of warning when the device is actually in a roaming data call.
-
->>>>>>> Added links, cleanup text, typos, alt text
 ## Discussion
 
 From the apps we've looked at, the main cases appear to be:
