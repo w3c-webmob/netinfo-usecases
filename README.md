@@ -59,6 +59,13 @@ The [Rdio](https://itunes.apple.com/us/app/rdio/id335060889) application allows 
 
 ![Rdio's settings menu](images/ios_rdio_settings.png)
 
+### NPR
+The [NPR application](https://itunes.apple.com/en/app/npr-news/id324906251) on iOS claims to be able to detect when there is a "slow connection" - when it does so, it displays an alert box. It's not clear how it detects the bandwidth or what a "slow connection" is (could mean latency or raw download speed from their server?). It also seems to do this erroneously as the Wi-Fi connection is at full-strength - so the alert doesn't really help the user as there is nothing they can do to rectify the situation.
+
+Even if bandwidth detection here was correct, notifying the user that "Content may be slow" is redundant to existing OS signals such as the radio signal strength, and to the fact that the user sees the content being downloaded slowly. Adding that notification as an alert that the user has to 'OK' is somewhat user hostile.
+
+![NPR slow download confirmation dialog](images/ios_npr.png)
+
 ### AppStore Application
 The AppStore does not allow users to download applications over 100Mbs unless they are on Wi-Fi.
 
