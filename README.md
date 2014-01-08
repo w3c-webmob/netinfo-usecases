@@ -130,7 +130,7 @@ Android affords users the choice to select that applications should only be upda
 
 ![Android's settings for managing how applications should be updated](images/android_google_play.png)
 
-## Economist
+### Economist
 The Economist application provides users with options for controlling which connection type is used to download new issues of the magazine.
 
 ![The Economist app's settings for managing what content is downloaded over which connection](images/android_economist.png)
@@ -191,6 +191,36 @@ Android email client offers a setting to download attachments only via Wi-Fi.
 
 The same option appears in Android's mail program. 
 ![Android mail](images/android_mail.png)
+
+### Google+
+
+The Google+ application allows the user to backup photos and videos taken with their device, and gives them network options for these tasks. The user can tell the application to only backup photos or videos on a WiFi connection, not to backup when roaming, or whether to force a backup. They also offer an “About Auto-Backup” section to offer the user more information about this feature. 
+
+![Android Google+](images/android_google_plus.png)
+
+### Google Play Books
+
+The Google Play Books application allows the user to choose whether they automatically update the app only on WiFi. Also users can “pin” books for use in offline mode, this will force the app to fully download the book (not just download per the chapter a user is reading) so the user can read the book while offline. If the user clicks the pin again the user will receive a message to ask them whether they accept that they will not be able to read the book unless they are connected to the internet. 
+
+![Android Google Play Books](images/android_google_play_books1.png)
+![Android Google Play Books](images/android_google_play_books2.png)
+
+###Player FM
+
+The Player FM application allows the user to choose which network type they wish to download episodes on, which network to auto-download episodes on and how many episodes to auto-download.  The application will also allow the user to cut all network activity ("Force offline"). 
+
+![Android Player FM](images/android_playerfm1.png)
+![Android Player FM](images/android_playerfm2.png)
+
+### WhatsApp
+
+The WhatsApp application allows the user to choose what media to download on the mobile network, when connected to Wi-Fi, and when roaming. 
+
+![Android WhatsApp](images/android_whatsapp.png)
+
+### Others
+
+Many other android applications offer the user the ability to turn off downloads when not on WiFi, these include: Amazon MP3, Chrome browser, Google Drive, Dropbox, Firefox, Flipboard, Google Play Movies, Google Play Newstand, TED. 
 
 ## Windows Phone
 Windows Phone provides users with the option to allow mobile data to be used in the event of limited Wi-Fi connectivity. When this option is changed to "use mobile data", the phone informs that user that "your phone will use mobile data when Wi-Fi connectivity is limited. This will use your data plan and may incur charged". It's unclear what "connectivity is limited" means.
