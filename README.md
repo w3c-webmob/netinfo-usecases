@@ -118,11 +118,6 @@ Any new content is loaded:
 ### iOS Messages application
 If there's a data connection, then the Native iOS [messages application](https://www.apple.com/ios/messages/) uses the [iMessage cloud service](http://en.wikipedia.org/wiki/IMessage) to send the text message (rather than SMS), but over GPRS it usually always fails, and thus message isn't sent.
 
-### Google Maps
-[Google Maps](https://itunes.apple.com/en/app/google-maps/id585027354?mt=8) recommends turning on Wi-Fi to improve location accuracy. Users will generally see this message when the application is launched.
-
-![Pop-up on Google Maps on iOS, asking users to enable wifi to improve accuracy](images/ios_google_maps.png)
-
 ### ABC iview
 The Australian Broadcasting Corporation's (ABC) [iview application on iOS](https://itunes.apple.com/au/app/abc-iview/id401778175) does not provide any settings for controlling which connection type should be used when consuming content. Instead, if the application detects a cellular connection, it pauses the download of content and displays a confirmation dialog that warns the user: "3G in use, charges may apply".
 
@@ -252,7 +247,6 @@ From the applications listed above, the recurring use cases appear to be:
 * Detecting when a connection switches from cellular to Wi-Fi, and vice versa.
 * Giving the user control as to whether large uploads/downloads should happen over cellular (mostly related to synchronizing media data like photos, videos, and audio files).
 * Preventing accidental data transfer over cellular, which could use up the user's data transfer quota and/or cost them money. 
-* Advising the user to activate Wi-Fi to improve location accuracy.
 
 In order to be able to replicate the functionality seen in native applications, the requirements for the web platform appear to be:
 
@@ -280,4 +274,4 @@ Screenshots used in this work are from copyrighted software applications. Their 
 ## Acknowledgments
 See the [list of contributors on GitHub](https://github.com/w3c-webmob/netinfo/graphs/contributors) to see who authored this document. 
 
-Huge thanks to Yoav Weiss, Mathias Bynens, Tobie Langel, Michael Hung fo, Jim Ley, Fernando Jiménez Moreno, Nicolas Perriault, Joe Crawford, Shane Hudson, Roland Warmerdam, Remy Sharp, and Andrew Overholt.
+Huge thanks to Yoav Weiss, Mathias Bynens, Tobie Langel, Michael Hung fo, Jim Ley, Fernando Jiménez Moreno, Nicolas Perriault, Joe Crawford, Shane Hudson, Roland Warmerdam, Remy Sharp, Andrew Overholt and Salvador de la Puente.
