@@ -215,10 +215,13 @@ The Google+ application allows the user to backup photos and videos taken with t
 
 ### Google Play Books
 
-The Google Play Books application allows the user to choose whether they automatically update the app only on WiFi. Also users can “pin” books for use in offline mode, this will force the app to fully download the book (not just download per the chapter a user is reading) so the user can read the book while offline. If the user clicks the pin again the user will receive a message to ask them whether they accept that they will not be able to read the book unless they are connected to the internet.
+The Google Play Books application allows the user to choose whether they automatically update the app only on WiFi.
 
-![Android Google Play Books](images/android_google_play_books1.png)
 ![Android Google Play Books](images/android_google_play_books2.png)
+
+Also users can “pin” books for use in offline mode, this will force the app to fully download the book (not just download per the chapter a user is reading) so the user can read the book while offline. If the user clicks the pin again the user will receive a message to ask them whether they accept that they will not be able to read the book unless they are connected to the internet.
+
+![Pinned books in Google Play Books](images/android_google_play_books1.png)
 
 ###Player FM
 
