@@ -25,6 +25,11 @@ According to Jim Lay of the BBC:
 >
 > It's possible that knowing during a page session that it's swapped between would be useful, as well as using it for the message we also use it for selecting appropriate quality media.
 
+### GMail 
+When [GMail](http://gmail.com) is loading, it provides users with a link to "load basic HTML (for slow connections)" - which is a simplified/limited-yet-functional version of GMail. 
+
+![GMail loading screen, with the option for the user to load up the basic HTML version](images/web_gmail.png)
+
 ##iOS
 This section examines iOS 6 and 7, as well as various applications. 
 
