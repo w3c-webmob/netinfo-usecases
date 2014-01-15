@@ -1,4 +1,4 @@
-#Use case and requirements for network information
+# Use case and requirements for network information
 This document outlines the use cases and requirements for an API that would give web applications access to network information. The use cases and requirements were gathered by looking at what both Websites, native platforms, and native applications do with such information.
 
 ## Motivation
@@ -9,7 +9,7 @@ The main questions this document seeks to explore are:
  * What can an application do when it knows the kind of connection the user's device is using?
  * How does an application respond to the device switching from one kind of network connection to another?
 
-##Web
+## Web
 The following are examples of web applications that use various means to detect if a user is on Wi-Fi or cellular.
 
 ### BBC News Website
@@ -30,7 +30,7 @@ When [GMail](http://gmail.com) is loading, it provides users with a link to "loa
 
 ![GMail loading screen, with the option for the user to load up the basic HTML version](images/web_gmail.png)
 
-##iOS
+## iOS
 This section examines iOS 6 and 7, as well as various applications.
 
 ### Settings
