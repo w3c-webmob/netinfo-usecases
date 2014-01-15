@@ -230,6 +230,13 @@ The Player FM application allows the user to choose which network type they wish
 ![Android Player FM](images/android_playerfm1.png)
 ![Android Player FM](images/android_playerfm2.png)
 
+### CalDAV-Sync
+The [CalDAV-Sync application](https://play.google.com/store/apps/details?id=org.dmfs.caldav.lib&hl=en) lists all the possible type of network connection types that Android exposes. Worth noting: the application also allows to override the background-data setting of Android.
+
+Although this gives the user a lot of control over which connection types to synchronize over, it assumes that users understand the differences between the connection types (and seems to assume that some connections types may perform better than other, which may not always be true). As some connection types may never be encountered, synchronization may not occur in certain situations.
+
+![CalDAV-Sync's settings for which connections to use](images/android_caldav-sync.png)
+
 ### WhatsApp
 
 The WhatsApp application allows the user to choose what media to download on the mobile network, when connected to Wi-Fi, and when roaming.
