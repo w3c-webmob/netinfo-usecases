@@ -30,6 +30,28 @@ When [GMail](http://gmail.com) is loading, it provides users with a link to "loa
 
 ![GMail loading screen, with the option for the user to load up the basic HTML version](images/web_gmail.png)
 
+### Carrier billing payments (e.g: Firefox Marketplace)
+When paying with carrier billing (users charged via their phone bill/credit), it is required to authenticate the user owns the phone number used to be charged. This is usually done by proving the user possess the phone on the time of the purchase.
+
+Such authentication can vary depending on whether the user is connected via WiFi or the mobile network:
+
+ * Network authentication: If the user is connected via the mobile network, the carrier's infrastructure can check from which SIM the HTTP request comes from and provide the customer authentication to the payment provider (e.g: by injecting headers in the HTTP request). This allows the customer to be identified with no interaction: users' don't need to provide their phone number nor verify it, everything is done by the network.
+
+![User prompted to pay with no user interaction](images/firefox_market_advise_of_charge.png)
+
+ * Payments with no network authentication: If the user's phone number cannot be authenticated via the network (e.g: connected via WiFi), the user needs to be prompted to verify the phone number. Firefox Marketplace does so as illustrated bellow:
+
+User is prompted to enter the phone number they want to pay with.
+![User prompted to enter phone number](images/web_firefox_market_phone_number_form.png)
+
+User is sent a PIN via SMS and prompted and requested to enter the PIN to verify the phone number:
+![User prompted to enter phone number](images/web_firefox_market_sms_pin_form.png)
+
+User gets to the advice of charge screen to confirm the payment:
+![User prompted to pay with no user interaction](images/web_firefox_market_advise_of_charge.png)
+
+Currently, carrier billing payment providers usually need to maintain a list of IP ranges for each carrier. Such list is used in the server to decide whether the user can be identified via the network and trigger the identification with the required carrier.
+
 ## iOS
 This section examines iOS 6 and 7, as well as various applications.
 
