@@ -236,6 +236,11 @@ The WhatsApp application allows the user to choose what media to download on the
 
 ![Android WhatsApp](images/android_whatsapp.png)
 
+### ICSSync
+The [ICSSync application](https://play.google.com/store/apps/details?id=org.nightlabs.android.icssync&hl=en) allows users to control if synchronization with online calendars should occur exclusively over Wi-Fi or "always" (meaning over any connection type).
+
+![ICSSync sync options](images/android_ICSSync.png)
+
 ### Others
 
 Many other android applications offer the user the ability to turn off downloads when not on WiFi, these include: Amazon MP3, Chrome browser, Google Drive, Dropbox, Firefox, Flipboard, Google Play Movies, Google Play Newstand, TED.
