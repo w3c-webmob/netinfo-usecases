@@ -281,8 +281,35 @@ In order to be able to replicate the functionality seen in native applications, 
 
  * provide a means for scripts to be notified if the connection type changes. This is to allow developers to make dynamic changes to the DOM and/or inform the user that the network connection type has changed (and that it could impact them in some way).
 
+## API Proposal
+
+[Network Information API v3](https://github.com/ferjm/w3c-netinfo-v3-proposal) contains a concrete proposal for an API based on the use cases and requirements gathered in this document.
+
 ## Discussion
-TBW...
+
+### Why not exposing a `bandwidth` property?
+
+* We did not find any valid use case.
+
+  * [Adaptive streaming according to network conditions](http://www.w3.org/community/coremob/wiki/Features/Network_Information_API#Poor_man.27s_adaptive_streaming) is not a use case that can be addressed by the Network Information API. Instead,  [DASH](http://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP) and/or the [MediaSource Extensions API](https://dvcs.w3.org/hg/html-media/raw-file/default/media-source/media-source.html) are better suited to address adaptive streaming. Check this [interesting video](http://www.youtube.com/watch?v=UklDSMG9ffU) about this topic.
+
+  * Use cases like the [example 2](http://www.w3.org/TR/netinfo-api/#examples) of the second version of this API, where an image viewer can select a low definition or a high definition image based on the current connection bandwidth, are being addressed by the [Responsive Images Community Group](http://responsiveimages.org/) - see in particular [the `picture` element](http://picture.responsiveimages.org) and [Client Hints](http://tools.ietf.org/html/draft-grigorik-http-client-hints). For performance reasons, the choice of which image to load should be left to the user agent (instead of scripts), based on the UA's knowledge of the screen’s pixel density or whatever other factors it deems relevant to the decision.
+
+* Hard to estimate.
+
+  * The [Outstanding issues section](http://www.w3.org/TR/netinfo-api/#outstanding-issues) of the second version of this API already mentions that _"`bandwidth` may be hard to implement and can be quite power-consuming to keep up-to-date"_ as it may require regularly sending test payloads that can also add extra costs to the user (probably very significant when roaming). _"Its value might be unrelated to the actual connection quality that could be affected by the server"_ and by other consumers of the same connection. It finally suggests a potential solution that could be _"to return non absolute values that couldn't be easily abused and would be more simple to produce for the user agent. For example, having a set of values like `very-slow`, `slow`, `fast` and `very-fast`. Another solution would be to have only values like `very-slow`, `slow` and the empty string"_. But this does not seem to be a good solution, even if the user agent is able to estimate the available bandwidth, the perception of network speed differs between consumers, what is considered fast enough for some network requests could be slow for others.
+  * [Mozilla's Android implementation](https://mxr.mozilla.org/mozilla-central/source/mobile/android/base/GeckoNetworkManager.java#72) maps static values based on the connection type, which is basically the same as exposing the network type, and it is quite inaccurate if the intention is to expose the network speed available. The theoretical maximum speed for the current connection type might be far from the real current speed. It does not only depend on the location, time of day, number of active peers but it is also controlled by the network provider. I can be connected via LTE but if I already consumed my monthly data plan, my connection will be really slow. That's why making assumptions about the network speed based on the connection type is not appropriate and should be discouraged. (Note that none of the [use cases](https://github.com/w3c-webmob/netinfo#use-cases-and-requirements) specifically mention this).
+
+### Why not exposing a `metered` property?
+
+* We didn't find any use case that cannot be addressed by exposing only the `type` property.
+
+* The user agent won't be able to know the value of this property without asking to the network provider or to the user about it. For the former, we would require network operators to provide an API which enables user agents to query the user's data plan and its associated costs. Apart from the obvious privacy issues, being a telco employee, I cannot see this happening any time soon. For the latter, it seems that developers can already ask the user if a specific connection type is metered or not and so keep a record of it if needed. So we cannot see any additional value that exposing a `metered` property could add to this API. In fact, existing implementations like [Android](http://androidxref.com/4.3_r2.1/xref/frameworks/support/v4/java/android/support/v4/net/ConnectivityManagerCompat.java#37) or [Firefox](https://mxr.mozilla.org/mozilla-central/source/mobile/android/base/GeckoNetworkManager.java#321) already map the cellular connection type to a metered connection.
+
+### Why not specifying the class of cellular connection (2G, 3G, etc.)?
+
+* We didn't find any valid use case that requires this level of detail.
+* Avoid network speed assumptions based on the network connection type.
 
 ### Managing downloads
 When starting a large download, one ought to ask whether replicating the native use cases ought to be done by the app directly or through some mediation via the browser. For instance, a [download manager](http://en.wikipedia.org/wiki/Download_manager) might be more effective for the "large download" use case: instead of developers having to manage downloads by inspecting the type of connection, a download manager could queue downloads until a certain connection type is available - plus provide the user with additional settings and options to pause/resume/cancel downloads, etc. A download manager could also take the form of an API that allows for file tranfers in the background. Scripts could then queue file transfers, and the user agent could then choose to transfer files when it sees fit: optimizing not only for network conditions, but also for battery and CPU usage (e.g. upload files when on Wi-Fi, plugged in, and with low CPU activity).
