@@ -300,7 +300,7 @@ Windows phone 8 allows users to control whether photos are synchronized over Wi-
 
 ## Discussion
 
-### Why not expose a bandwidth?
+### Why not expose bandwidth?
 
 Short answers: 
  * We did not find any valid use case.
