@@ -63,15 +63,15 @@ When [GMail](http://gmail.com) is loading, it provides users with a link to "loa
 ![GMail loading screen, with the option for the user to load up the basic HTML version](images/web_gmail.png)
 
 ### Carrier billing payments (e.g: Firefox Marketplace)
-When paying with carrier billing (users charged via their phone bill/credit), it is required to authenticate the user owns the phone number used to be charged. This is usually done by proving the user possess the phone on the time of the purchase.
+When paying for a product or service via [carrier billing](http://en.wikipedia.org/wiki/Mobile_payment#Direct_operator_billing), the payment provider needs to confirm the user owns the phone account they intend to pay with before their account is charged. This is done by proving the user is in possession of the authorized SIM at the time of purchase.
 
-Such authentication can vary depending on whether the user is connected via WiFi or the mobile network:
+The authentication process varies depending on whether the user is connected via WiFi or the mobile network:
 
- * Network authentication: If the user is connected via the mobile network, the carrier's infrastructure can check from which SIM the HTTP request comes from and provide the customer authentication to the payment provider (e.g: by injecting headers in the HTTP request). This allows the customer to be identified with no interaction: users' don't need to provide their phone number nor verify it, everything is done by the network.
+ * When connecting via the mobile network, many carriers are able to do Cellular-based Authentication. Such authentication is accomplished by querying the carrier's infrastructure from which SIM the HTTP request comes from. Once authenticated, the payment provider receives the authentication from the carrier's system (e.g: by injecting headers in the HTTP request). This process is done automatically and doesn't require customer interaction: users' don't need to type their phone number nor verify it, everything is handled by the network operator.
 
 ![User prompted to pay with no user interaction](images/firefox_market_advise_of_charge.png)
 
- * Payments with no network authentication: If the user's phone number cannot be authenticated via the network (e.g: connected via WiFi), the user needs to be prompted to verify the phone number. Firefox Marketplace does so as illustrated bellow:
+ * When Cellular-based Authentication is not available (e.g: user is connected via WiFi) authentication requires user interaction. Typically, the users are required to type their phone number, they receive an SMS in such phone number with a one-time PIN that the user needs to type back to complete the authentication. Firefox Marketplace does so as illustrated bellow:
 
 User is prompted to enter the phone number they want to pay with.
 ![User prompted to enter phone number](images/web_firefox_market_phone_number_form.png)
@@ -82,7 +82,7 @@ User is sent a PIN via SMS and prompted and requested to enter the PIN to verify
 User gets to the advice of charge screen to confirm the payment:
 ![User prompted to pay with no user interaction](images/web_firefox_market_advise_of_charge.png)
 
-Currently, carrier billing payment providers usually need to maintain a list of IP ranges for each carrier. Such list is used in the server to decide whether the user can be identified via the network and trigger the identification with the required carrier.
+In order to decide what authentication process to trigger, payment providers currently try to identify the type of connection on the server. This usually entails maintaining lists of IP ranges for each carrier they integrate and some extra redirections.
 
 ## iOS
 This section examines how iOS makes use of network information. This section also examines various independent iOS applications, which are available in the AppStore.
