@@ -62,6 +62,28 @@ When [GMail](http://gmail.com) is loading, it provides users with a link to "loa
 
 ![GMail loading screen, with the option for the user to load up the basic HTML version](images/web_gmail.png)
 
+### Carrier billing payments (e.g: Firefox Marketplace)
+When paying for a product or service via [carrier billing](http://en.wikipedia.org/wiki/Mobile_payment#Direct_operator_billing), the payment provider needs to confirm the user owns the phone account they intend to pay with before their account is charged. This is done by proving the user is in possession of the authorized SIM at the time of purchase.
+
+The authentication process varies depending on whether the user is connected via WiFi or the mobile network:
+
+ * When connecting via the mobile network, many carriers are able to do Cellular-based Authentication. Such authentication is accomplished by querying the carrier's infrastructure from which SIM the HTTP request comes from. Once authenticated, the payment provider receives the authentication from the carrier's system (e.g: by injecting headers in the HTTP request). This process is done automatically and doesn't require customer interaction: users' don't need to type their phone number nor verify it, everything is handled by the network operator.
+
+![User prompted to pay with no user interaction](images/firefox_market_advise_of_charge.png)
+
+ * When Cellular-based Authentication is not available (e.g: user is connected via WiFi) authentication requires user interaction. Typically, the users are required to type their phone number, they receive an SMS in such phone number with a one-time PIN that the user needs to type back to complete the authentication. Firefox Marketplace does so as illustrated bellow:
+
+User is prompted to enter the phone number they want to pay with.
+![User prompted to enter phone number](images/web_firefox_market_phone_number_form.png)
+
+User is sent a PIN via SMS and prompted and requested to enter the PIN to verify the phone number:
+![User prompted to enter phone number](images/web_firefox_market_sms_pin_form.png)
+
+User gets to the advice of charge screen to confirm the payment:
+![User prompted to pay with no user interaction](images/web_firefox_market_advise_of_charge.png)
+
+In order to decide what authentication process to trigger, payment providers currently try to identify the type of connection on the server. This usually entails maintaining lists of IP ranges for each carrier they integrate and some extra redirections.
+
 ## iOS
 This section examines how iOS makes use of network information. This section also examines various independent iOS applications, which are available in the AppStore.
 
