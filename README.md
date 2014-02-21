@@ -69,7 +69,7 @@ The authentication process varies depending on whether the user is connected via
 
  * When connecting via the mobile network, many carriers are able to do Cellular-based Authentication. Such authentication is accomplished by querying the carrier's infrastructure from which SIM the HTTP request comes from. Once authenticated, the payment provider receives the authentication from the carrier's system (e.g: by injecting headers in the HTTP request). This process is done automatically and doesn't require customer interaction: users' don't need to type their phone number nor verify it, everything is handled by the network operator.
 
-![User prompted to pay with no user interaction](images/firefox_market_advise_of_charge.png)
+![User prompted to pay with no user interaction](images/web_firefox_market_advise_of_charge.png)
 
  * When Cellular-based Authentication is not available (e.g: user is connected via WiFi) authentication requires user interaction. Typically, the users are required to type their phone number, they receive an SMS in such phone number with a one-time PIN that the user needs to type back to complete the authentication. Firefox Marketplace does so as illustrated bellow:
 
